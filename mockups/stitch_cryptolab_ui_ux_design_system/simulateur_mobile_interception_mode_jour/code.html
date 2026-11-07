@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-primary-container": "#fff1eb",
+        "surface-tint": "#9b4500",
+        "secondary": "#006398",
+        "surface-container-lowest": "#ffffff",
+        "primary-fixed": "#ffdbca",
+        "on-secondary": "#ffffff",
+        "on-tertiary-fixed": "#002114",
+        "surface-container-low": "#f5f3f6",
+        "on-tertiary-fixed-variant": "#005137",
+        "error-container": "#ffdad6",
+        "secondary-container": "#5bb8fe",
+        "on-primary-fixed": "#331200",
+        "tertiary-container": "#007f58",
+        "surface-variant": "#e4e1e5",
+        "error": "#ba1a1a",
+        "surface-container": "#f0edf1",
+        "on-secondary-fixed": "#001d31",
+        "on-error": "#ffffff",
+        "on-secondary-fixed-variant": "#004b73",
+        "surface": "#fbf8fc",
+        "on-secondary-container": "#00476e",
+        "on-tertiary-container": "#ccffe3",
+        "on-surface-variant": "#564338",
+        "surface-container-high": "#eae7eb",
+        "tertiary": "#006444",
+        "outline-variant": "#ddc1b3",
+        "inverse-on-surface": "#f3f0f4",
+        "on-error-container": "#93000a",
+        "on-surface": "#1b1b1e",
+        "on-background": "#1b1b1e",
+        "tertiary-fixed": "#85f8c4",
+        "inverse-surface": "#303033",
+        "secondary-fixed": "#cce5ff",
+        "on-primary-fixed-variant": "#763300",
+        "surface-container-highest": "#e4e1e5",
+        "outline": "#897267",
+        "secondary-fixed-dim": "#93ccff",
+        "on-primary": "#ffffff",
+        "primary": "#903f00",
+        "tertiary-fixed-dim": "#68dba9",
+        "on-tertiary": "#ffffff",
+        "surface-bright": "#fbf8fc",
+        "surface-dim": "#dcd9dd",
+        "inverse-primary": "#ffb68e",
+        "primary-container": "#b45309",
+        "primary-fixed-dim": "#ffb68e",
+        "background": "#fbf8fc"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "space-sm": "0.5rem",
+        "gutter": "1.25rem",
+        "margin": "2rem",
+        "space-xs": "0.25rem",
+        "margin-mobile": "1rem",
+        "gutter-mobile": "0.75rem",
+        "space-md": "0.875rem",
+        "space-xl": "2rem",
+        "space-lg": "1.25rem"
+      },
+      "fontFamily": {
+        "label-sm": ["JetBrains Mono"],
+        "label-md": ["JetBrains Mono"],
+        "headline-lg": ["Space Grotesk"],
+        "headline-xl": ["Space Grotesk"],
+        "code-lg": ["JetBrains Mono"],
+        "code-md": ["JetBrains Mono"],
+        "body-lg": ["Geist"],
+        "headline-md": ["Space Grotesk"],
+        "code-sm": ["JetBrains Mono"],
+        "headline-xl-mobile": ["Space Grotesk"],
+        "body-sm": ["Geist"],
+        "body-md": ["Geist"]
+      },
+      "fontSize": {
+        "label-sm": ["0.625rem", {"lineHeight": "0.875rem", "letterSpacing": "0.08em", "fontWeight": "600"}],
+        "label-md": ["0.75rem", {"lineHeight": "1rem", "letterSpacing": "0.06em", "fontWeight": "600"}],
+        "headline-lg": ["1.5rem", {"lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "headline-xl": ["2.25rem", {"lineHeight": "2.75rem", "letterSpacing": "-0.03em", "fontWeight": "600"}],
+        "code-lg": ["0.9375rem", {"lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+        "code-md": ["0.8125rem", {"lineHeight": "1.375rem", "letterSpacing": "0em", "fontWeight": "400"}],
+        "body-lg": ["1.125rem", {"lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+        "headline-md": ["1.25rem", {"lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "500"}],
+        "code-sm": ["0.6875rem", {"lineHeight": "1.125rem", "letterSpacing": "0.02em", "fontWeight": "500"}],
+        "headline-xl-mobile": ["1.75rem", {"lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "body-sm": ["0.8125rem", {"lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "400"}],
+        "body-md": ["0.9375rem", {"lineHeight": "1.5rem", "letterSpacing": "-0.005em", "fontWeight": "400"}]
+      }
+    }
+  }
+}</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><div class="w-7 h-7 bg-primary text-on-primary rounded flex items-center justify-center"><span class="material-symbols-outlined text-[16px]">lock</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface leading-none">CryptoLab</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Mode Jour</span></div></div><div class="hidden xs:flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm tracking-wide font-medium text-on-surface">HMAC-SHA256</span></div><div class="flex items-center gap-1"><button aria-label="Basculer mode" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">light_mode</span></button><button aria-label="Menu console" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-0.5"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter-mobile py-space-sm space-y-space-md">
+<!-- SCENARIO HEADER BANNER -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Laboratoire MITM</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-medium">CANAL-TCP: 0x443</span>
+</div>
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface leading-tight">Scène 03 : L'Interception Réseau</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+        Attaque par Altération de Message &amp; Détection par Contre-Mesure HMAC.
+      </p>
+</div>
+<!-- Live Transmission Progress Bar -->
+<div class="w-full bg-surface-container-high rounded-full h-1.5 mt-1 overflow-hidden flex">
+<div class="bg-tertiary w-2/5 h-full"></div>
+<div class="bg-error w-1/5 h-full animate-pulse"></div>
+<div class="bg-surface-variant flex-1 h-full"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="font-code-sm text-code-sm">Émetteur A</span>
+<span class="font-code-sm text-code-sm text-error font-semibold">Trafic Altéré</span>
+<span class="font-code-sm text-code-sm">Récepteur B</span>
+</div>
+</div>
+<!-- INTERACTIVE PAYLOAD COMPARISON CARD -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl overflow-hidden flex flex-col">
+<!-- Panel Header -->
+<div class="bg-surface-container-low px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">swap_horiz</span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Flux de Trames Hexadécimales</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">ASCII / UTF-8</span>
+</div>
+<div class="p-space-md flex flex-col gap-space-md">
+<!-- Stage 1: Legit Payload (Agent A) -->
+<div class="flex flex-col gap-1.5 bg-surface-container-lowest rounded-lg p-2.5 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Agent A Émetteur" class="w-8 h-8 rounded-full object-cover shadow-sm bg-surface-container-low" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXSrbvg8iz9FkW3vJP2QlyONVD9NuwAkziMltah2Ht6LkY44wkD3a4dAAH_ddd7SS1AyALq-nbuR8R7y_tF13yQh0cRG2Of1G1sQjWGOyWj8vuBEOUrye_Zjzza7Vn58QWfTpWXWi_uGUOSKFx2yDSVFsfIx3f-9x9pccwY8Py6ifF3Ps7J_ema5QbMIEcZr2PJ41XuZ9IndV7F2rt40RP2NE6YwqnZiMLzV_mJJ0U"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Agent A (Émetteur Légitime)</span>
+<span class="font-code-sm text-code-sm text-tertiary">Payload Signé Intègre</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-medium">ORIGINAL</span>
+</div>
+<div class="bg-surface-container-low rounded p-2 flex flex-col gap-1">
+<div class="flex items-baseline justify-between">
+<span class="font-code-lg text-code-lg text-on-surface font-semibold tracking-wide">« SAVE BILL »</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">9 octets</span>
+</div>
+<!-- Hex dump line -->
+<div class="flex flex-wrap gap-1 font-code-sm text-code-sm text-on-surface-variant select-all">
+<span class="px-1 bg-surface-container rounded text-on-surface font-semibold">53</span>
+<span class="px-1 bg-surface-container rounded text-on-surface font-semibold">41</span>
+<span class="px-1 bg-surface-container rounded text-on-surface font-semibold">56</span>
+<span class="px-1 bg-surface-container rounded text-on-surface font-semibold">45</span>
+<span class="px-1 text-outline-variant">20</span>
+<span class="px-1 bg-surface-container rounded text-on-surface">42</span>
+<span class="px-1 bg-surface-container rounded text-on-surface">49</span>
+<span class="px-1 bg-surface-container rounded text-on-surface">4C</span>
+<span class="px-1 bg-surface-container rounded text-on-surface">4C</span>
+</div>
+</div>
+</div>
+<!-- Stage 2: MITM Interception Arrow & Spy Badge -->
+<div class="relative py-1 flex items-center justify-center">
+<!-- Connecting Line -->
+<div class="absolute inset-x-4 top-1/2 h-0.5 bg-error-container"></div>
+<!-- Central Hacker Callout -->
+<div class="relative z-10 bg-error-container text-on-error-container px-3 py-1.5 rounded-full shadow-sm flex items-center gap-2">
+<img alt="The Spy Hacker" class="w-6 h-6 rounded-full object-cover bg-inverse-surface shadow-xs" src="https://lh3.googleusercontent.com/aida/ALJJyrDi4Co1t4q-KnQKD4GPFdSkRC72YgJiMbpYJptj7Mq793PtLqSTu4PUIu767LQtTs4R2oV9BXAxwoRDcWhfq_9noXXzo6r8Wzbb6b8dqxQaT8Wo69sWPrwXdaIPF_u9QQTG_yjfiwWR6ZRGkS8gosfQ8zTqC1ls8e4RmpuUd_E3bek4qKLZOAzM_Pk6_WahojlJbfLT6-6CS_HJzf25hxScZt8x_kvKw7iGqeNnVYtusQ"/>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-error">sensors_off</span>
+<span class="font-label-sm text-label-sm text-error uppercase font-bold tracking-tight">INTERCEPTION MITM PAR THE SPY</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-error animate-bounce">arrow_downward</span>
+</div>
+</div>
+<!-- Stage 3: Altered Payload -->
+<div class="flex flex-col gap-1.5 bg-error-container/20 rounded-lg p-2.5 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-error text-on-error flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">security_update_warning</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-error font-bold">Charge Injectée / Altérée</span>
+<span class="font-code-sm text-code-sm text-on-error-container font-medium">Substitution du 1er mot</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-error text-on-error font-medium">TAMPERED</span>
+</div>
+<div class="bg-surface-container-lowest rounded p-2 flex flex-col gap-1">
+<div class="flex items-baseline justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-code-lg text-code-lg text-error font-bold tracking-wide">« KILL BILL »</span>
+<span class="font-label-sm text-label-sm bg-error-container text-error px-1.5 rounded uppercase font-semibold">1-byte drift</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">9 octets</span>
+</div>
+<!-- Hex dump with highlights -->
+<div class="flex flex-wrap gap-1 font-code-sm text-code-sm select-all">
+<span class="px-1 bg-error-container text-error font-bold rounded">4B</span>
+<span class="px-1 bg-error-container text-error font-bold rounded">49</span>
+<span class="px-1 bg-error-container text-error font-bold rounded">4C</span>
+<span class="px-1 bg-error-container text-error font-bold rounded">4C</span>
+<span class="px-1 text-outline-variant">20</span>
+<span class="px-1 bg-surface-container rounded text-on-surface">42</span>
+<span class="px-1 bg-surface-container rounded text-on-surface">49</span>
+<span class="px-1 bg-surface-container rounded text-on-surface">4C</span>
+<span class="px-1 bg-surface-container rounded text-on-surface">4C</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CRYPTOGRAPHIC CONSEQUENCE BREAKDOWN -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">biotech</span>
+<span class="font-headline-md text-headline-md text-on-surface">Conséquences Cryptographiques</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">VS AUDIT</span>
+</div>
+<!-- Comparative Tiles -->
+<div class="flex flex-col gap-space-sm">
+<!-- Naive MAC (Failure) -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-md text-code-md text-on-surface font-semibold">MAC Naïf : H(K || M)</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error text-on-error font-bold">VULNÉRABLE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Attaque par <strong class="text-on-surface">extension de longueur</strong> possible sur Merkle-Damgård. L'attaquant injecte du padding et forge une signature recevable sans jamais extraire le secret <em>K</em>.
+        </p>
+</div>
+<!-- HMAC-SHA256 (Success / Defense) -->
+<div class="bg-surface-container-high rounded-lg p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-md text-code-md text-on-surface font-semibold">HMAC-SHA256 (RFC 2104)</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+            ÉCHEC ATTAQUE
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Protection par double-enveloppement : <code class="font-code-sm text-code-sm text-primary">H(K ⊕ opad || H(K ⊕ ipad || M))</code>.
+          Grâce à l'<strong class="text-on-surface">effet d'avalanche</strong>, modifier un seul octet inverse ~50% des bits du digest.
+        </p>
+</div>
+</div>
+</div>
+<!-- TAG DIVERGENCE COMPARISON BOX -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">fingerprint</span>
+<span class="font-headline-md text-headline-md text-on-surface">Divergence des Condensats</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">256 BITS</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-2">
+<!-- Expected Tag -->
+<div class="flex flex-col gap-0.5">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Empreinte Légitime (Attendue)</span>
+<span class="font-code-sm text-code-sm text-tertiary font-medium">Validée K_secret</span>
+</div>
+<div class="bg-surface-container-lowest px-2 py-1.5 rounded flex items-center justify-between overflow-x-auto">
+<span class="font-code-sm text-code-sm text-tertiary font-bold tracking-tight">a2f4c9<span class="text-on-surface-variant font-normal">801b94d7...0f41</span>8b23c9</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary ml-2">check_circle</span>
+</div>
+</div>
+<!-- Recalculated Tag -->
+<div class="flex flex-col gap-0.5">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-error uppercase font-semibold">Empreinte Calculée sur « KILL BILL »</span>
+<span class="font-code-sm text-code-sm text-error font-medium">Drift Total 100%</span>
+</div>
+<div class="bg-surface-container-lowest px-2 py-1.5 rounded flex items-center justify-between overflow-x-auto">
+<span class="font-code-sm text-code-sm text-error font-bold tracking-tight">7e9140<span class="text-on-surface-variant font-normal">38c41ea9...bc7a</span>12b6f4</span>
+<span class="material-symbols-outlined text-[16px] text-error ml-2">cancel</span>
+</div>
+</div>
+<!-- Avalanche visual metric -->
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex justify-between items-center font-code-sm text-code-sm text-on-surface-variant">
+<span>Corrélation de bits calculée</span>
+<span class="text-on-surface font-semibold">0.03% (Indépendance stricte)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden flex">
+<div class="bg-error h-full w-[99.97%]"></div>
+<div class="bg-tertiary h-full w-[0.03%]"></div>
+</div>
+</div>
+</div>
+<!-- Receiver Verdict Status Badge -->
+<div class="w-full bg-tertiary text-on-tertiary rounded-full py-2 px-3 shadow-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-semibold text-center">
+        REJET IMMÉDIAT PAR LE RÉCEPTEUR
+      </span>
+</div>
+</div>
+<!-- INTERACTIVE LIVE TEST CONSOLE (Micro-interaction) -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-space-md flex flex-col gap-space-sm" id="sim-interactive-lab">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary-container">science</span>
+<span class="font-headline-md text-headline-md text-on-surface">Testeur Manuel de Charge</span>
+</div>
+<button class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors flex items-center gap-1" id="toggle-payload-btn">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+        Inverser trame
+      </button>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Trame simulée sur le réseau physique</label>
+<div class="flex items-center gap-2">
+<input class="w-full font-code-lg text-code-lg bg-surface-container-low text-error px-3 py-2 rounded focus:outline-none" id="payload-input" readonly="" type="text" value="KILL BILL"/>
+<button class="bg-primary text-on-primary font-body-md text-body-md px-4 py-2 rounded font-medium shadow-sm hover:bg-primary-container active:scale-95 transition-all" id="verify-pill">
+          Auditer
+        </button>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-start gap-2.5 transition-all" id="sim-status-box">
+<span class="material-symbols-outlined text-[20px] text-error mt-0.5" id="sim-icon">gpp_bad</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-error font-semibold" id="sim-title">TRAME CORROMPUE DÉTECTÉE</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="sim-desc">
+          Le HMAC transmis ne correspond pas à la clé partagée K(Agent_A, Agent_B). Paquet rejeté sans exécution.
+        </p>
+</div>
+</div>
+</div>
+<!-- NAVIGATION CALL-TO-ACTION -->
+<div class="pt-space-xs pb-space-sm flex flex-col gap-2">
+<a class="w-full bg-primary-container text-on-primary-container py-3.5 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 hover:opacity-95 active:scale-[0.99] transition-all" data-path="authentification" href="#authentification">
+<span class="font-body-lg text-body-lg font-semibold">Tester la Vérification sur Agent B →</span>
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</a>
+<p class="font-label-sm text-label-sm text-center text-on-surface-variant uppercase tracking-wider">
+      Passer à la console d'authentification cryptographique de l'Agent B
+    </p>
+</div>
+</div>
+<!-- Vanilla Interactive Behavior for Dynamic Simulation -->
+<script>
+  (function initSimulator() {
+    const toggleBtn = document.getElementById('toggle-payload-btn');
+    const input = document.getElementById('payload-input');
+    const verifyBtn = document.getElementById('verify-pill');
+    const icon = document.getElementById('sim-icon');
+    const title = document.getElementById('sim-title');
+    const desc = document.getElementById('sim-desc');
+    const statusBox = document.getElementById('sim-status-box');
+
+    let isAltered = true;
+
+    function renderState() {
+      if (isAltered) {
+        input.value = "KILL BILL";
+        input.className = "w-full font-code-lg text-code-lg bg-surface-container-low text-error px-3 py-2 rounded focus:outline-none";
+        icon.innerText = "gpp_bad";
+        icon.className = "material-symbols-outlined text-[20px] text-error mt-0.5";
+        title.innerText = "TRAME CORROMPUE DÉTECTÉE";
+        title.className = "font-label-md text-label-md text-error font-semibold";
+        desc.innerText = "Le HMAC transmis ne correspond pas à la clé partagée K. Paquet écarté sans exécution.";
+        statusBox.className = "bg-error-container/30 rounded-lg p-2.5 flex items-start gap-2.5 transition-all";
+      } else {
+        input.value = "SAVE BILL";
+        input.className = "w-full font-code-lg text-code-lg bg-surface-container-low text-tertiary px-3 py-2 rounded focus:outline-none";
+        icon.innerText = "verified";
+        icon.className = "material-symbols-outlined text-[20px] text-tertiary mt-0.5";
+        title.innerText = "AUTHENTICITÉ & INTÉGRITÉ VALIDÉES";
+        title.className = "font-label-md text-label-md text-tertiary font-semibold";
+        desc.innerText = "HMAC identique calculé par Agent B. Message certifié émis par Agent A.";
+        statusBox.className = "bg-tertiary-container/30 rounded-lg p-2.5 flex items-start gap-2.5 transition-all";
+      }
+    }
+
+    if (toggleBtn && input) {
+      toggleBtn.addEventListener('click', () => {
+        isAltered = !isAltered;
+        renderState();
+      });
+    }
+
+    if (verifyBtn) {
+      verifyBtn.addEventListener('click', () => {
+        verifyBtn.classList.add('opacity-75');
+        setTimeout(() => {
+          verifyBtn.classList.remove('opacity-75');
+          renderState();
+        }, 150);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_10px_rgba(0,0,0,0.04)]" data-active-classes="text-primary-container font-semibold relative after:content-[''] after:w-1 after:h-1 after:bg-primary-container after:rounded-full after:mt-0.5"><div class="flex items-center justify-around h-16 px-1"><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Tableau</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 transition-colors text-primary-container font-semibold relative after:content-[''] after:w-1 after:h-1 after:bg-primary-container after:rounded-full after:mt-0.5" data-path="simulateur" href="#"><span class="material-symbols-outlined text-[22px]">radar</span><span class="font-label-sm text-label-sm">Simulateur</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="authentification" href="#"><span class="material-symbols-outlined text-[22px]">verified_user</span><span class="font-label-sm text-label-sm">Sécurité</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="labo" href="#"><span class="material-symbols-outlined text-[22px]">science</span><span class="font-label-sm text-label-sm">Labo</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="plus" href="#"><span class="material-symbols-outlined text-[22px]">more_horiz</span><span class="font-label-sm text-label-sm">Plus</span></a></div></nav></body></html>

@@ -1,0 +1,22 @@
+# Dépendances Node.js
+node_modules/
+
+# Next.js
+.next/
+out/
+node_modules/
+.next/
+.env*
+!.env.example
+
+# Variables d'environnement
+.env
+.env.local
+.env.*.local
+
+# Fichiers de build
+dist/
+build/
+
+# Logs
+npm-debug.log*
